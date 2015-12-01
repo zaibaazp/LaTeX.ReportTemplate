@@ -1,0 +1,36 @@
+########################################
+# LaTeX and BibTeX extras (not needed!)#
+########################################
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.gls.aux
+*.pdf
+*.lof
+*.lot
+*.sub
+*.suc
+*.syc
+*.sym
+*.toc
+*.tdo
+
+######################
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+*~
+
+###################
+# Compiled Source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so

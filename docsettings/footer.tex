@@ -1,0 +1,26 @@
+
+\newpage
+
+\gloss[nocite]{*} \printgloss{glossary}
+
+% command to update:: 
+% makeindex -s baa_main.ist -t baa_main.glg -o baa_main.gls baa_main.glo
+
+\newpage
+
+% If you need it to say anything other than "Appendix"
+%\addcontentsline{toc}{chapter}{Appendix}
+\appendix
+\input{chapters/app3}
+\input{chapters/app1}
+
+\newpage
+% If you need it to say anything that is not "References"
+%\addcontentsline{toc}{chapter}{Bibliografía}
+
+\bibliographystyle{siam} % or alpha, ...
+%\bibliography{library} % you actually need a .bib file for this(Not included)
+\input{bibliografia} % We provided this, but it shouldn't be done this peasant way!
+
+\end{document}
+

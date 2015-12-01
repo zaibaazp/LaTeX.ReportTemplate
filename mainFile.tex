@@ -1,0 +1,60 @@
+% This is the actual main file of the REPORT (thesis) being written. It calls upon
+% other files like the header, footer, as well as each of the individual chapters.
+% The structure is pretty straightforward. 
+% 
+% The location of each of the files: 
+% - docsettings/header.tex: contains all the document info, the pakages used and 
+% macros defined.
+% - docsettings/titlepage.tex: Contains the title page of the document, in case a 
+% specific one is required.
+% - docsettings/prologue.tex: Contains statements, acknowledgements, etc...
+% that would go before the actual contents.
+% - chapters/intro.tex: Introductory chapter.
+% - chapters/chaptX.tex: Chapter X in the document.
+% - chapters/conclusion.tex: Final chapter.
+% - chapters/appY.tex: Appendix number Y of the document.
+%
+% It is advisable to place all the images within the ./pics folder, which is already 
+% preselected to hold the images. 
+%
+% 
+
+\input{docsettings/header}
+\begin{document}
+\nocite{*}
+%---------------------------------
+\input{docsettings/titlepage}
+\pagenumbering{roman}
+%for 1.2 sptacing:
+%\renewcommand{\baselinestretch}{1.20}\normalsize
+%---------------------------------
+\input{docsettings/prologue}
+\chapter*{Abstract}
+En este trabajo se discuten los fundamentos de la acústica no lineal y una de sus 
+aplicaciones más relevantes: las bocinas direccionales. El trabajo inicia discutiendo
+ el análisis clásico de las ecuaciones de onda de audio, continúa presentando los
+ fundamentos del audio no lineal hasta llegar a las ecuaciones de Westervelt, 
+Burgers y Khokhlov-Zabolotskaya-Kuznetsov ...
+\newpage
+%---------------------------------
+\tableofcontents
+\listoffigures
+\listoftables
+\listofsymbols 
+\input{docsettings/simbolos2}
+\newpage
+\pagenumbering{arabic}
+%---------------------------------
+\input{chapters/intro}
+%---------------------------------
+
+% --------------------------------
+\input{chapters/chapt3}
+%---------------------------------
+
+%---------------------------------
+
+%---------------------------------
+\input{chapters/conclusion}
+%---------------------------------
+\input{docsettings/footer} 

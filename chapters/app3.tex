@@ -1,0 +1,44 @@
+\chapter{Acotamiento de los parámetros $(\eta, \epsilon)$}\label{app3}
+
+En esta sección, se muestra cómo es que los parámetros $(\symeta, \symmach)$ son menores a $1$, de tal forma que las aproximaciones de orden que se muestran en el trabajo sean confiables. Lo que se busca probar, es que bajo las condiciones del medio en las cuales se desarrolla la tesis, los parámetros no pueden ser mayores o iguales a 1.\medskip\\
+En primer lugar, se presentan los parámetros de interés en este apartado:
+\begin{equation}
+\symeta = \frac{\mu \omega}{\rho_0c_0^2} ,\quad \symmach = \frac{u_0}{c_0}
+\end{equation}
+Se puede apreciar que los parámetros no dependen únicamente del medio en el cual ocurre el fenómeno físico, sino que también de propiedades intrínsecas de la onda con la que se está trabajando. Los valores con los cuales se tiene control son la frecuencia angular $\omega$ y la velocidad pico de la onda emitida $u_0$. A continuación se hace una revisión sobre los parámetros del medio, para después mostrar que bajo las condiciones del medio relevantes para este trabajo, no existe problema al utilizar al parámetro $\tildeps$ como medida para hacer las aproximaciones; donde $\tildeps = \max{\eta,\epsilon}$.
+
+\section{Revisión de los parámetros del medio}
+En esta sección, se discuten los parámetros que dependen del medio, y se especifican las condiciones de éste que se consideran intrínsecamente a lo largo del trabajo. En particular, las condiciones de presión del aire y temperatura determinan en gran medida la magnitud de los parámetros importantes. En el cuadro \ref{tab:app3}, se muestran los rangos en los cuales se encuentran los parámetros $\mu,\; \rho_0$ y $c_0$ respectivamente para el aire, con base en las distintas temperaturas y considerando una presión atmosférica de $1 atm$\footnote{\emph{i.e.}, al nivel del mar.}. Los valores varían dependiendo de la temperatura atmosférica, en el caso de la viscosidad de cizallamiento, éstos están determinados por la fórmula de Sutherland \cite{wikiviscosidad}:
+\[
+\mu = \mu_0\frac{T_0+C}{T+C}\left(\frac{T}{T_0}\right)^{3\slash 2}
+\]
+donde para el aire se tiene que: $\mu_0 = $18.27$\times10^{-6}$ [Pa], $T_0 =$291.15 [K], y la constante de Sutherland $C=$120. Los valores para velocidad del sonido y densidad se tomaron de \cite{wikivelocidad}.
+\begin{table}[hbpt]
+\small
+\centering
+\caption{Rangos de parámetros en el aire}
+\begin{tabular}{cccc}
+\hline
+Temperatura [$^{\circ}$C]& Viscosidad, $\mu$ [Pa] & Velocidad, $c_0$ $[m/s]$& Densidad, $\rho_0$ $[kg/m^3]$\\
+\hline
+35 & 1.605$\times 10^{-5}$ & 351.88 & 1.1455 \\
+30 & 1.632$\times 10^{-5}$ & 349.02 & 1.1644 \\ 
+25 & 1.658$\times 10^{-5}$ & 346.13 & 1.1839 \\ 
+20 & 1.685$\times 10^{-5}$ & 343.21 & 1.2041 \\ 
+15 & 1.711$\times 10^{-5}$ & 340.27 & 1.225 \\ 
+10 & 1.736$\times 10^{-5}$ & 337.31 & 1.2466 \\ 
+5 & 1.762$\times 10^{-5}$ & 334.32 & 1.2690 \\ 
+0 & 1.787$\times 10^{-5}$ & 331.3 & 1.29220 \\ 
+-5 & 1.812$\times 10^{-5}$ & 328.25 & 1.3163 \\ 
+-10 & 1.837$\times 10^{-5}$ & 325.18 & 1.3413 \\ 
+-15 & 1.862$\times 10^{-5}$ & 322.07 & 1.3673 \\ 
+-20 & 1.886$\times 10^{-5}$ & 318.94 & 1.3943 \\ 
+-25 & 1.910$\times 10^{-5}$ & 315.77 & 1.4224 \\ 
+\hline
+\end{tabular}
+\label{tab:app3}
+\end{table}
+Con estos valores, en el caso más extremo, se tiene para $\omega$ que: $ \symeta = 1\text{.}347\times 10^{-10} \omega $ por lo que, $\omega < 13\text{.}47GHz$, en este trabajo se utilizaron frecuencias entre 20 y 45,000$Hz$, por lo que en el peor de los casos se tiene que \[ \symeta = 6\text{.}0615\times10^{-6}\]
+Por su parte, el parámetro $\symmach$ se puede estimar tomando en cuenta la relación  \[ u_0 \approx \frac{p_0}{\rho_0 c_0} \]por lo que \[ \symmach = \frac{u_0}{c_0} = \left(\frac{p_0}{\rho_0 c_0} \right) \frac{1}{c_0}\] donde $p_0\; [Pa]$ es la presión sonora de la señal. El máximo de presión utilizada en este trabajo pretende ser $p_0 = 200 [Pa]$, por lo que:
+\[  \symmach \leq \frac{p_0}{\rho_0 c^2_0} = \frac{200}{1\text{.}4183\times10^5} < 1.41\times10^{-3}\] %ESTILO, ESTÁ BIEN ponerlo así??? ESPACIO HACIA ABAJO, MAS DESARROLLO
+Con estos datos se puede ver porque sí es relevante tomar una aproximación de segundo orden para el parámetro $\tildeps$, dado que si se considera a $\tildeps = \max\left\lbrace \symmach, \symeta\right\rbrace \approx 1\times10^{-3}$ entonces, la aproximación de orden cuadrático daría un error aproximado de $O\left(10^{-6}\right)$.
