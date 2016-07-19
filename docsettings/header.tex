@@ -1,4 +1,4 @@
-\documentclass[fontsize=9.5pt,
+\documentclass[fontsize=12pt,
     a4paper,
     oneside, % twoside also available
     index=totoc,
@@ -13,11 +13,12 @@
 %\usepackage[LGR,T1]{fontenc}    
 
 % If Spanish characters are required.
-\usepackage[greek,spanish]{babel}  
+%\usepackage[greek,spanish]{babel}  
 \usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
 
 % Setup for fullpage use and change geometry:
-\usepackage[paperwidth=170mm, paperheight=225mm, margin=20mm]{geometry}
+\usepackage[inner=60mm, outer=50mm, top=2.5cm, bottom=3cm]{geometry}
 %\usepackage{geometry}
 \usepackage{fullpage}
 
@@ -37,7 +38,7 @@
 \usepackage{latexsym}
 \usepackage{lscape}
 \usepackage{subfigure}
-\usepackage{listofsymbols}
+\usepackage[final]{listofsymbols}
 %\usepackage[final]{listofsymbols} Use only for the final run TeX run.
 \usepackage{yfonts}
 \usepackage{mathabx}
@@ -49,23 +50,24 @@
 %\usepackage{graphics}
 \usepackage{listings}
 \usepackage{array}
-\usepackage[refpages]{gloss}
+%\usepackage[refpages]{gloss}
+\usepackage[colorinlistoftodos, textsize=footnotesize, textwidth=25mm]{todonotes}
+\usepackage{multirow} 
 \usepackage{textgreek}
 \usepackage[numbers]{natbib} % you're welcome on your awesome bibliography
 
 \definecolor{LinkColor}{rgb}{0,0,0}
 \usepackage[%
-    pdftitle={PDF Title},%
-    pdfauthor={Author},%
+    pdftitle={MPhil Transfer Report Solis Lemus},%
+    pdfauthor={Jose Alonso Solis Lemus},%
     pdfcreator={LaTeX with hyperref},
-    pdfsubject={PDF Subject},
-    pdfkeywords={keywords here}]{hyperref}
+    pdfsubject={Biomedical image analysis},
+    pdfkeywords={segmentation, tracking, image analysis}]{hyperref}
 \hypersetup{colorlinks=true,%
     linkcolor=LinkColor,%
     citecolor=LinkColor,%
     filecolor=LinkColor,%
     menucolor=LinkColor,%
-    pagecolor=LinkColor,%
     urlcolor=LinkColor}
   
 \definecolor{lightblue}{rgb}{0.8,0.85,1}
@@ -79,23 +81,22 @@
 %----------------------------------
 % Macros and definitions of the work.
 %----------------------------------
+\newcommand{\autor}{AUTHOR'S NAME}
+\newcommand{\titulo}{TITLE OF THE PROJECT}
+%\newcommand{\myrefs}{./mphilrefs} % PATH of your bib file.
+\newcommand{\matlab}{\textsc{Matlab}\textsuperscript{\textregistered}}
+\newcommand{\ie}{\emph{i.e.}}
 
-% contiene código de MATLAB
-% -----usage: \lstinputlisting{archivoMatlab.m}
-% -----en lugar de : 
-%           \lstinputlisting{/Users/JoseAlonso/Documents/MATLAB/archivoMatlab.m}
-\newcommand{\autor}{José Alonso Solís Lemus}
-\newcommand{\titulo}{TITLE OF THE DOCUMENT (THESIS or REPORT)}
+% For math functions you make yourself
+\DeclareMathOperator{\mode}{mode}
+\DeclareMathOperator{\mean}{mean}
+\DeclareMathOperator{\std}{std}
 
-% Caracteres extraños
-\newcommand{\tildeps}{\tilde{\epsilon}}
-\newcommand{\uu}{\mathbf{u}}
-\DeclareMathOperator{\seno}{sen}
-% teoremas y así
+% Useful for definitions and theorems
 \newtheorem{teo}{Theorem}
 \newtheorem{dfn}{Definition}
 % ---------------------------------
-\makegloss
+%\makegloss
 
 %Si no se quieren hojas numeradas
 %\pagestyle{headings}
