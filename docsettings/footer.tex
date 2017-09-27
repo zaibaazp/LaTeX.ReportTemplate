@@ -1,4 +1,3 @@
-
 \newpage
 
 % To make a glossary (not actually sure how...)
@@ -11,17 +10,24 @@
 
 % If you need it to say anything other than "Appendix"
 %\addcontentsline{toc}{chapter}{Appendix}
-\appendix
-\input{chapters/app3}
-\input{chapters/app1}
+%\appendix
+%\input{chapters/appendix1}
+%\input{chapters/appendix2}
 
 \newpage
 % If you need it to say anything that is not "References"
 %\addcontentsline{toc}{chapter}{Bibliografía}
 
-\bibliographystyle{siam} % or alpha, ...
-%\bibliography{library} % you actually need a .bib file for this(Not included)
-\input{bibliografia} % We provided this, but it shouldn't be done this peasant way!
+%%Added comment for this as it doesn't work right now
 
-\end{document}
-
+\bibliographystyle{unsrt} % or alpha, siam, IEEEtranN...
+\bibliography{\myrefs} 
+% you actually need a .bib file for this(Not included)
+%
+%
+% YOU WILL NEED TO ADD THE BIB FILE HERE WITH YOUR REFERENCES.
+% wE'LL DO THIS TOWARDS THE END WHEN YOU ACTUALLY HAVE A REPORT!!!
+%
+%
+%
+% \input{ZaiMPhil.bib} % We provided this, but it shouldn't be done this peasant way!

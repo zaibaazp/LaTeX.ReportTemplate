@@ -4,6 +4,7 @@
     index=totoc,
     parskip=half,
     chapterprefix]{scrbook}
+
 % In case you're using an earlier version of LaTeX
 \usepackage{etex}
 \reserveinserts{28}
@@ -16,6 +17,7 @@
 %\usepackage[greek,spanish]{babel}  
 \usepackage[pdftex]{graphicx}
 \usepackage{epstopdf}
+\usepackage{rotating}
 
 % Setup for fullpage use and change geometry:
 \usepackage[inner=60mm, outer=50mm, top=2.5cm, bottom=3cm]{geometry}
@@ -32,14 +34,16 @@
 \usepackage{tikz}
 \usepackage{IEEEtrantools}
 \usepackage{circuitikz}
-\usepackage{pgfplots}
+%\usepackage{pgfplots}
 \usepackage{verbatim}
 \usepackage{schemabloc}
 \usepackage{latexsym}
 \usepackage{lscape}
 \usepackage{subfigure}
-\usepackage[final]{listofsymbols}
-%\usepackage[final]{listofsymbols} Use only for the final run TeX run.
+%\usepackage{listofsymbols} % Comment this when you have to use the bottom one.
+%\usepackage[Final]{listofsymbols} %Use only for the final run TeX run.
+%\usepackage{glossaries}
+\usepackage{nomencl}
 \usepackage{yfonts}
 \usepackage{mathabx}
 
@@ -47,6 +51,7 @@
 
 \usepackage{longtable}
 \usepackage{tabularx}
+\usepackage{setspace} % ADDED 11/08/2016
 %\usepackage{graphics}
 \usepackage{listings}
 \usepackage{array}
@@ -55,23 +60,31 @@
 \usepackage{multirow} 
 \usepackage{textgreek}
 \usepackage[numbers]{natbib} % you're welcome on your awesome bibliography
+\usepackage{wrapfig}
 
 \definecolor{LinkColor}{rgb}{0,0,0}
 \usepackage[%
-    pdftitle={MPhil Transfer Report Solis Lemus},%
-    pdfauthor={Jose Alonso Solis Lemus},%
+    pdftitle={MPhil Transfer Report Zaibaa},%
+    pdfauthor={Zaibaa Patel},%
     pdfcreator={LaTeX with hyperref},
-    pdfsubject={Biomedical image analysis},
-    pdfkeywords={segmentation, tracking, image analysis}]{hyperref}
+    pdfsubject={PPG},
+    pdfkeywords={colorectal cancer surgery, PPG, anastomosis}]{hyperref}
 \hypersetup{colorlinks=true,%
     linkcolor=LinkColor,%
     citecolor=LinkColor,%
     filecolor=LinkColor,%
     menucolor=LinkColor,%
     urlcolor=LinkColor}
-  
+
+\usepackage{xcolor, soul}   % ADDED 30/08/2016 for highlighting text  
+\sethlcolor{olive}
+
 \definecolor{lightblue}{rgb}{0.8,0.85,1}
 \lstset{backgroundcolor=\color{lightblue}}
+
+%\definecolor{insertref}{rgb}{255,255,0}
+\newcommand{\insertref}{\todo[color=yellow]}
+\newcommand{\vi}{\todo[noline, color=red]}
 
 % easy MATLAB code input (you need to get mcode first)
 %\usepackage[framed,numbered]{mcode}
@@ -81,12 +94,11 @@
 %----------------------------------
 % Macros and definitions of the work.
 %----------------------------------
-\newcommand{\autor}{AUTHOR'S NAME}
-\newcommand{\titulo}{TITLE OF THE PROJECT}
-%\newcommand{\myrefs}{./mphilrefs} % PATH of your bib file.
+\newcommand{\autor}{YOUR NAME}
+\newcommand{\titulo}{TITLE OF PROJECT}
+\newcommand{\myrefs}{./mphilrefs} % PATH of your bib file.
 \newcommand{\matlab}{\textsc{Matlab}\textsuperscript{\textregistered}}
 \newcommand{\ie}{\emph{i.e.}}
-
 % For math functions you make yourself
 \DeclareMathOperator{\mode}{mode}
 \DeclareMathOperator{\mean}{mean}
